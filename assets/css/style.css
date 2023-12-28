@@ -820,15 +820,15 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
 @media (min-width: 767px) {
   .about-mf .box-pl2 {
     margin-top: 3rem;
     padding-left: 0rem;
   }
+}
+@media (min-width: 768px)
+.container, .container-md, .container-sm {
+    max-width: 945px;
 }
 
 .skill-mf span {
