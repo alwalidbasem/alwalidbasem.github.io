@@ -79,7 +79,7 @@ a:hover {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center center;
+  background-position: 75%;
 }
 
 @media (max-width: 1024px) {
