@@ -429,5 +429,45 @@ transform: scale(1);
 }
 
     </style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+
+    // Navbar Animations 
+    const navItems = document.querySelectorAll('.nav-item, .navbar-brand, .nav-main-btns,.side-nav-item');
+    navItems.forEach(item => item.classList.add('hide'));
+    setTimeout(() => {
+        navItems.forEach(item => item.classList.add('show'));
+        navItems.forEach(item => item.classList.remove('hide'));
+    }, 150);
+
+    //Side bar show & hide
+    var Sidebar = document.querySelector('.Sidebar');
+    var leftBarToggler = document.querySelector('.leftbar-toggler');
+    leftBarToggler.addEventListener('click', function () {     
+        leftBarToggler.disabled = true;
+        if(Sidebar.classList.contains("hide")){
+            Sidebar.classList.add('SideBar-showup');
+            Sidebar.classList.remove('hide');
+        }else{
+            Sidebar.classList.toggle('SideBar-showup');
+            Sidebar.classList.toggle('SideBar-hidden');
+        }
+        setTimeout(function(){
+            leftBarToggler.disabled = false;
+            if(Sidebar.classList.contains("SideBar-hidden")){
+                Sidebar.classList.remove('SideBar-hidden');
+                Sidebar.classList.add('hide');
+            }
+        },600)
+    });          
+      
+});
+
+
+</script>
+        <script src="http://localhost/PHPOOP/DevFolio/views/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
