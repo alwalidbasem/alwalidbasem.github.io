@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+        <link href="http://localhost/PHPOOP/DevFolio/views/navbars.css" rel="stylesheet" />
+    </head>
+    <body>
+        
+            <div class="navbar navbar-expand-lg navbar-dark">
+            <!-- Icon in the first 25% -->
+                <div class="navbar-brand w-25 np-1">
+                            <a href="#">
+                                <img width="60px" src="https://i.ibb.co/N1HqfH0/PIXIECAFT.png" alt="Icon">
+                            </a>
+                        <div class="shop-name fs-4 fw-bold position-sticky top-0">
+                            PixieCaft
+                        </div>
+                </div>
+                                    
+                <!-- Buttons in the middle 50% -->
+                <div class="links-nav navbar-nav w-50 gap-5 np-1" id="navbarNav">
+                    <ul class="nav-btns navbar-nav mx-auto gap-5 fw-bold justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Store</a>
+                        </li>    
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item nav-item-4">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="nav-main-btns navbar-nav w-25 np-1">
+                    <button type="button" class="btn btn-custom cart-btn position-relative fs-6">
+                        <i class="bi bi-cart3"></i>
+                        <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-light text-dark">
+                        0
+                        <span class="visually-hidden">Cart Items</span>
+                        </span>
+                    </button>
+
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <div class="dropdown">
+                            <button class="btn btn-custom login-btn fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Login
+                            </button>
+                            <ul class="profile-dropdown bg-dark dropdown-menu">
+                              <li><a class="dropdown-item profile text-light" href="#">my profile</a></li>
+                              <li><a class="dropdown-item profile text-light" href="#">Logout</a></li>
+                            </ul>
+                          </div>
+        
+                        <img class="MChead-icon" src="https://mc-heads.net/avatar/Notch/128/front" width="38px" height="38px" alt="Head-Icon">
+                        <button class="leftbar-toggler" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+    
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+
+            <!--Left nav for Small devices-->
+            <div class="Sidebar hide">
+                <div class="container-fluid">
+                    <div class="left-nav-row row">
+                        <div class="side-nav-item">
+                            <a class="nav-link" href="#">Home page</a>
+                        </div>
+                        <div class="side-nav-item">
+                            <a class="nav-link" href="#">Store</a>
+                        </div>
+                        <div class="side-nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </div>
+                        <div class="side-nav-item">
+                            <a class="nav-link" href="#">Support/FAQ</a>
+                        </div>
+                    </div>
+                    <div class="Sidebar-footer">
+                        <h2 class="bg-white text-dark">gg</h2>
+                </div>
+                </div>
+            </div>
+    <style>
+        :root{
+
+--main--color : #0df8d5; /* your logo main color */
+--primary-txt-color:aliceblue; /* like the Home page / store .etc navbar colors*/
+
+--topbar-bg-color:#212529; /*the background color of your top navbar*/
+
+--sidebar-fade-color:#353535b0; /*Sidebar - right background color*/
+--sidebar-bg-color:#212529; /*Sidebar - left background color*/
+
+--custom-btn1-bgcolor:#353535; /* dropdown & cart background color*/
+--custom-btn1-bgcolor-onhover:#161616;/*dropdown & cart background color on hover*/
+
+--nv-main-btns-color:aliceblue; /*dropdown & cart text color*/
+--nv-main-btns-color-onhover:aliceblue; /*dropdown & cart text color*/
+
+--dropdown-item-hover:#161616; /*Profile dropdown menu buttons hover color*/
+
+
+}
+body{
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+overflow: hidden;
+}
+
+/* PUBLIC */
+.show {
+opacity: 1;
+transform: translateY(0);
+transition: opacity 0.2s, transform 0.2s;
+
+}
+.hide{
+opacity: 0;
+transform: translateY(10px);
+}
+.np-1{
+padding: 1rem!important;
+}
+
+/**//**//**//**/
+/* top navbar */
+/**//**//**//**/
+.t-nav{
+display: block;
+width: 100%;
+}
+.navbar{
+align-items: center;
+background-color:var(--topbar-bg-color);
+height: 7vh;
+}
+.navbar-brand{
+display: flex;
+flex-direction: row;
+align-items: center;
+text-align: center;
+z-index: 1000; /* for make it show up side bar*/
+margin: 0;
+}
+.bg-dark{
+background-color: #353535;
+}
+.navbar .container{
+width: 100%;
+margin: 0px;
+padding: 0px;
+}
+
+.nav-btns {
+align-items: center!important;
+}
+
+.nav-main-btns{
+z-index: 1000; /* for make it show up side bar*/
+gap: 1.4rem;
+width: 25%;
+justify-content: end;
+}
+.btn:focus-visible{
+color: var(--primary-txt-color)!important;
+background-color: var(--custom-btn1-bgcolor)!important;
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+color: var(--primary-txt-color)!important;
+background-color: var(--custom-btn1-bgcolor)!important;
+border-color: #161616;
+}
+
+.btn-custom{
+background-color: var(--custom-btn1-bgcolor);
+color:var(--primary-txt-color);
+}
+.login-btn{
+border-radius: 10px 0px 0px 10px;
+}
+
+.btn-custom:hover{
+background-color: var(--custom-btn1-bgcolor-onhover);
+color:var(--nv-main-btns-color-onhover);
+}
+
+.MChead-icon{
+background-color: #353535;
+width:38px;
+height:38px;
+}
+.leftbar-toggler{
+background-color: var(--custom-btn1-bgcolor);
+border: none;
+padding: 0.4rem;
+display: none!important;
+}
+
+/* Profile dropdown*/
+.profile-dropdown{
+position: absolute!important;
+border-radius: 0.2rem;
+}
+.dropdown-item.profile:hover{
+background-color: var(--dropdown-item-hover);
+}
+
+/**//**//**//**/
+/*Side navbar*/
+/**//**//**//**/
+.Sidebar {
+z-index: 999;
+position:absolute;
+top: -110%;
+left:0%;
+height: 100%;
+width: 100%;
+background-color:var(--sidebar-fade-color);
+right: 0%; /* Initial hidden position */
+display: none;
+}
+.SideBar-showup{
+animation: SideBar-Showup 0.5s forwards;
+}
+.SideBar-hidden{
+animation: SideBar-Hidden 0.5s forwards;
+}
+@keyframes SideBar-Hidden {
+0% {
+    top: 0%;
+}
+100% {
+    top: -110%;
+}
+}
+@keyframes SideBar-Showup {
+0% {
+    top: -110%;
+}
+100% {
+    top: 0%;
+}
+}
+
+.Sidebar .container-fluid {
+width: 40%;
+height: 100%;
+background-color: var(--sidebar-bg-color);
+}
+.left-nav-row{
+position: absolute;
+top: 7.55rem;
+width: 100%;
+color: var(--primary-txt-color);
+font-size: 22px;
+font-weight: 900;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap:1.5rem;
+}
+.side-nav-item{
+width: 75%;
+}
+.side-nav-item .cart-btn{
+display: none;
+width: 50%;
+border: 1px solid var(--primary-txt-color);
+border-radius: 0.4rem;
+}
+
+/**//**//**//**/
+/* Navbars Items (Side & top navbars)*/
+.nav-link  {
+font-size: 20px;
+color: var(--primary-txt-color);
+}
+.nav-item::after,.side-nav-item::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 0.1em;
+background-color: var(--main--color);
+opacity: 0;
+transition: opacity 300ms, transform 300ms;
+}
+.nav-item::after,
+.side-nav-item::after{
+opacity: 1;
+transform: scale(0);
+transform-origin: center;
+}
+.nav-item:hover::after,
+.nav-item:focus::after,
+.side-nav-item:hover::after,
+.side-nav-item:focus::after{
+transform: scale(1);
+}
+
+@keyframes Navitems_animation{
+0%{
+   border-bottom:1.5px solid #ffa20000;
+    border-top:1.5px solid #ffa20000;
+}
+100%{
+    border-bottom:1.5px solid var(--main--color);
+    border-top:1.5px solid #ffa20000;
+}
+}
+
+
+/* @Media querys for make side & top navbars responsiveabliy*/
+
+/*For hide Support/FAQ link from navbar*/ 
+@media only screen and (max-width: 1055px) {
+.navbar{
+    padding: 0.3rem!important;
+}
+.navbar .np-1{
+    padding: 0!important;
+}
+.navbar-brand{
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+}
+.nav-item-4{
+    display: none;
+}
+
+}
+@media only screen and (max-width: 995px) {
+.navbar{
+    height: 8vh;
+}
+}
+
+/*For hide top navbar links & show side navbar toggler button*/
+@media only screen and (max-width: 750px) {
+.navbar{
+    height: 12vh;
+}
+.navbar-brand img{
+    width: 80px;
+}
+.navbar-brand .shop-name{
+    display: none;
+}
+.nav-btns{
+    display: none !important;
+    background-color: var(--main--color);
+}
+.nav-main-btns{
+    width: 100%;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: end!important;
+}
+.leftbar-toggler{
+    display: flex!important;
+}
+.Sidebar{
+    position: absolute;
+    top: -100%;
+    display: block;
+}
+.Sidebar .container-fluid {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 40%;
+    height: 100%;
+    background-color: var(--sidebar-bg-color);
+    padding: 0.8rem;
+}  
+.Sidebar-footer {
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    width: 100%;
+    background-color: var(--sidebar-bg-color);
+}  
+
+
+}
+
+/*For make side navbar more resbonsiveabilty*/
+@media only screen and (max-width: 600px) {
+.Sidebar .container-fluid {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 55%;
+    height: 100%;
+    background-color: var(--sidebar-bg-color);
+    z-index: 1005!important;
+}  
+}
+
+/*for hide cart button from the top navbar & show it into sidebar*/
+@media only screen and (max-width: 450px) {
+.btn-group .cart-btn{
+    display: none;
+}
+.side-nav-item .cart-btn{
+    display: block;
+    width: 50%;
+    margin: 0% 25% 0% 25%;
+}
+
+}
+
+    </style>
+</body>
+</html>
